@@ -7,7 +7,6 @@ import (
 	"strings"
 
 	Config "github.com/PoolahGit/poolah-api-lib/config"
-	"github.com/PoolahGit/poolah-users-api/models"
 	"github.com/lestrrat-go/jwx/jwk"
 	"github.com/lestrrat-go/jwx/jwt"
 )
