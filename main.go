@@ -2,13 +2,11 @@ package initializers
 
 import (
 	"database/sql"
-	"fmt"
 	"github.com/PoolahGit/poolah-api-lib/config"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	cognito "github.com/aws/aws-sdk-go/service/cognitoidentityprovider"
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/spf13/viper"
 	"log"
 )
 
@@ -28,8 +26,8 @@ func InitAWS(userPoolId string, appClientId string, appClientSecret string) *con
 
 }
 
-func InitDB() *sql.DB {
-	db, err := sql.Open("mysql", fmt.Sprintf("%v", viper.Get("DSN")))
+func InitDB(dsn string) *sql.DB {
+	db, err := sql.Open("mysql", dsn)
 
 	if err != nil {
 		log.Fatalf("failed to connect: %v", err)
