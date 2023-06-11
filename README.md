@@ -23,3 +23,6 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 ```bash
 source $HOME/.bashrc
 ```
+
+## Update new Version
+All controlled by tags
