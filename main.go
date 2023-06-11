@@ -21,9 +21,7 @@ func InitAWS(userPoolId string, appClientId string, appClientSecret string) *con
 		AppClientID:     appClientId,
 		AppClientSecret: appClientSecret,
 	}
-
 	return a
-
 }
 
 func InitDB(dsn string) *sql.DB {
